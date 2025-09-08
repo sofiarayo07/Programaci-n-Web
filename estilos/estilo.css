@@ -1,0 +1,37 @@
+h1{
+    color: cadetblue ;
+    font-style: inherit;
+    text-align: center;
+    display: inline-block;
+    margin-left: 10px;
+
+}
+
+#sub{
+    font-size:large;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:cadetblue;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    margin-top: 15px;
+}
+
+table th, table td{
+    text-align: center;
+}
+table th {
+    background-color: cadetblue;
+    color: white;
+}
+
+footer{
+    color:rgb(202, 211, 219);
+    background-color: rgb(49, 123, 126);
+}
+
+.beneficios{
+    list-style: none;
+}
