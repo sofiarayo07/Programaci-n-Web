@@ -1,5 +1,5 @@
 h1{
-    color: cadetblue ;
+    color:rgb(38, 111, 114);
     font-style: inherit;
     text-align: center;
     display: inline-block;
@@ -10,7 +10,7 @@ h1{
 #sub{
     font-size:large;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:cadetblue;
+    color:rgb(10, 135, 139);
     font-weight: bold;
 }
 
@@ -29,9 +29,22 @@ table th {
 
 footer{
     color:rgb(202, 211, 219);
-    background-color: rgb(49, 123, 126);
+    background-color:cadetblue;
 }
 
 .beneficios{
     list-style: none;
+}
+
+header {
+  background-color: cadetblue;
+  width: 100%;
+  position: static;
+  z-index: 100;
+}
+
+#menu{
+    align-items: center;
+    color: white;
+    
 }
