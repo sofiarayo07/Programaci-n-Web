@@ -2,7 +2,7 @@ header {
     background-color: cadetblue;
     width: 100%;
     display: flex;
-    align-items: center;         /* centra verticalmente */
+    align-items: center;         
     justify-content: space-between;
     padding: 10px 20px;
     box-sizing: border-box;
@@ -13,10 +13,10 @@ header img {
 }
 
 #menu {
-    flex: 1;               /* el menú ocupa el espacio disponible */
+    flex: 1;               
     display: flex;
-    justify-content: center; /* 👈 centra horizontalmente los enlaces */
-    gap: 20px;              /* separación entre enlaces */
+    justify-content: center; 
+    gap: 20px;              
 }
 
 #menu a {
