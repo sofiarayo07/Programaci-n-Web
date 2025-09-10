@@ -104,3 +104,13 @@ header {
 #cuenta-creada:hover {
     background-color:   #0d7699be;
 }
+
+body{
+    background-color: #e0e7ee;
+}
+
+#titulo-re{
+    font-family:initial;
+    font-size: 30px;
+    
+}
