@@ -86,6 +86,8 @@ footer{
 
 body{
     background-color: #e0e7ee;
+    margin: 0;
+    padding: 0;
 }
 
 #titulo-re{

@@ -1,32 +1,44 @@
+
 header {
-    background-color: cadetblue;
-    width: 100%;
-    display: flex;
-    align-items: center;         
-    justify-content: space-between;
-    padding: 10px 20px;
-    box-sizing: border-box;
+  position: fixed;        
+  top: 0;                 
+  left: 0;
+  width: 100%;            
+  background-color: cadetblue;
+  display: flex;
+  align-items: center;
+  padding: 8px 20px;
+  box-sizing: border-box;
+  z-index: 1000;          
 }
 
-header img {
-    margin-right: 20px; /* espacio entre logo y menú */
+
+body {
+  margin-top: 80px;  
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  margin-right: 20px;
 }
 
 #menu {
-    flex: 1;               
-    display: flex;
-    justify-content: center; 
-    gap: 20px;              
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 #menu a {
-    color: white;
-    text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    transition: color 0.3s ease;
-    font-size: larger;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  transition:  0.3s;
 }
 
 #menu a:hover {
-    color: lightgray;
+  background: rgba(255,255,255,0.2);
+  border-radius: 5px;
 }
