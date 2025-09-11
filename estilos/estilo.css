@@ -1,27 +1,30 @@
-
-h1{
-    color:rgb(38, 111, 114);
+/* ===== TITULOS ===== */
+h1 {
+    color: rgb(106, 246, 251);
     font-style: inherit;
     text-align: center;
     display: inline-block;
     margin-left: 10px;
-
 }
 
-
-#sub{
-    font-size:large;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color:rgb(10, 135, 139);
+#sub {
+    font-size: large;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(10, 135, 139);
     font-weight: bold;
 }
 
+#titulo-re {
+    font-family: initial;
+    font-size: 30px;
+}
+
+/* ===== TABLAS ===== */
 table {
     width: 100%;
     margin-top: 15px;
 }
-
-table th, table td{
+table th, table td {
     text-align: center;
 }
 table th {
@@ -29,15 +32,21 @@ table th {
     color: white;
 }
 
-footer{
-    color:rgb(202, 211, 219);
-    background-color:cadetblue;
+/* ===== FOOTER ===== */
+footer {
+    color: rgb(202, 211, 219);
+    background-color: cadetblue;
+    padding: 16px;
+    text-align: center;
+    margin-top: auto; /* asegura que se quede abajo */
 }
 
-.beneficios{
+/* ===== LISTAS ===== */
+.beneficios {
     list-style: none;
 }
 
+/* ===== REGISTRO ===== */
 .registro {
     display: flex;
     justify-content: center;
@@ -50,15 +59,12 @@ footer{
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1); 
-
-
 }
 #formulario-datos label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
-
 #formulario-datos input {
     width: 100%;
     padding: 10px;
@@ -67,8 +73,7 @@ footer{
     border-radius: 5px;
     box-sizing: border-box;
 }
-
-#cuenta-creada{
+#cuenta-creada {
     margin-top: 20px;
     padding: 6px 10px;
     border: none;
@@ -81,42 +86,70 @@ footer{
     color: white;
 }
 #cuenta-creada:hover {
-    background-color:   #0d7699be;
+    background-color: #0d7699be;
 }
 
-body{
-    background-color: #e0e7ee;
-    margin: 0;
-    padding: 0;
-}
-
-#titulo-re{
-    font-family:initial;
-    font-size: 30px;
-    
-}
-
-/* Que el body siempre ocupe el 100% de la pantalla */
+/* ===== BASE ===== */
 html, body {
     height: 100%;
 }
-
-/* El body en modo columna */
 body {
+    background-color: #e0e7ee;
+    margin: 0;
+    padding: 0;
+
     display: flex;
     flex-direction: column;
 }
-
-/* Main o el contenedor de tu contenido se expande */
 main {
-    flex: 1;   /* ocupa todo el espacio disponible */
+    flex: 1; /* empuja el footer al fondo si hay poco contenido */
 }
 
-/* Footer queda siempre abajo */
-footer {
-    margin-top: auto;   /* se empuja hacia el final */
-    color: rgb(202, 211, 219);
-    background-color: cadetblue;
-    padding: 16px;      /* dale algo de aire para que no quede “aplastado” */
-    text-align: center;
+/* ===== HERO ===== */
+.hero {
+    position: relative;
+    width: 100%;
+    max-height: 500px;
+    overflow: hidden;
+    margin-bottom: 30px;
 }
+.hero img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.65);
+}
+.hero-text {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    color: #fff;
+    padding: 0 20px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+.hero-text h1 {
+    font-size: 2rem;
+    margin: 0 0 10px 0;
+}
+.hero-text p {
+    font-size: 1.1rem;
+    margin: 0 0 20px 0;
+}
+.btn-cta {
+    display: inline-block;
+    background-color: cadetblue;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: filter 0.2s ease;
+}
+.btn-cta:hover {
+    filter: brightness(1.1);
+}
+
+
