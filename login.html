@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Login | Técnicos Celaya</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS de tu proyecto -->
+  <link rel="stylesheet" href="estilos/estilo.css">
+  <link rel="stylesheet" href="estilos/menu.css">
+
+  <!-- CSS de login -->
+  <link rel="stylesheet" href="estilos/login.css">
+  <link rel="icon" href="imagenes/fotocopia.png">
+</head>
+
+
+<body>
+  <!-- Header -->
+  <header>
+    <img src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" class="logo">
+    <nav id="menu">
+      <a href="landing page.html">Inicio</a>
+      <a href="registro.html">Registro</a>
+      <a href="login.html" aria-current="page">Login</a>
+      <a href="ofertas.html">Ofertas</a>
+      <a href="aboutus.html">Sobre nosotros</a>
+    </nav>
+  </header>
+<script>
+(function() {
+  const header = document.querySelector("header");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY && window.scrollY > 50) {
+      // Scrollea hacia abajo -> ocultar header
+      header.classList.add("hide-on-scroll");
+    } else {
+      // Scrollea hacia arriba -> mostrar header
+      header.classList.remove("hide-on-scroll");
+    }
+    lastScrollY = window.scrollY;
+  });
+})();
+</script>
+  <!-- Contenido -->
+  <main class="login-page">
+    <section class="login-box">
+      <h1>Inicia sesión</h1>
+
+      <form class="login-form" action="#" method="post">
+        <input type="email" name="email" placeholder="Correo electrónico" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        <button type="submit">Entrar</button>
+      </form>
+
+      <!-- Olvidaste la contraseña -->
+      <p class="forgot-text">
+        <a href="#">¿Olvidaste tu contraseña?</a>
+      </p>
+
+      <!-- Enlace al registro -->
+      <p class="signup-text">
+        ¿No tienes cuenta?
+        <a href="registro.html">Regístrate</a>
+      </p>
+    </section>
+  </main>
+</body>
+</html>

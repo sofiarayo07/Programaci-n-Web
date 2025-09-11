@@ -10,6 +10,24 @@
         <link rel="stylesheet" href="estilos/menu.css">
         <link rel="stylesheet" href="estilos/aboutus.css">
     </head>
+    <script>
+(function() {
+  const header = document.querySelector("header");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY && window.scrollY > 50) {
+      // Scrollea hacia abajo -> ocultar header
+      header.classList.add("hide-on-scroll");
+    } else {
+      // Scrollea hacia arriba -> mostrar header
+      header.classList.remove("hide-on-scroll");
+    }
+    lastScrollY = window.scrollY;
+  });
+})();
+</script>
+
     <body>
     <header>
         <img src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" class="logo">

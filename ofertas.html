@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Ofertas | Técnicos Celaya</title>
+  <link rel="stylesheet" href="estilos/estilo.css">
+  <link rel="stylesheet" href="estilos/menu.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+
+<body>
+  <header>
+    <img src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" class="logo">
+    <nav id="menu">
+      <a href="landing page.html">Inicio</a>
+      <a href="registro.html">Registro</a>
+      <a href="login.html">Login</a>
+      <a href="ofertas.html" aria-current="page">Ofertas</a>
+      <a href="aboutus.html">Sobre nosotros</a>
+    </nav>
+  </header>
+  <script>
+(function() {
+  const header = document.querySelector("header");
+  let lastScrollY = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY && window.scrollY > 50) {
+      // Scrollea hacia abajo -> ocultar header
+      header.classList.add("hide-on-scroll");
+    } else {
+      // Scrollea hacia arriba -> mostrar header
+      header.classList.remove("hide-on-scroll");
+    }
+    lastScrollY = window.scrollY;
+  });
+})();
+</script>
+
+  <main style="margin-top:100px; padding: 0 16px;">
+
+    <!-- Promoción del mes -->
+    <section>
+      <h2>Promoción del mes</h2>
+      <div class="promo">
+        <p>Obtén <strong>10% de descuento</strong> en mantenimiento preventivo durante este mes.</p>
+        <p>Aplican equipos de inyección y láser. Consulta términos en tu cotización.</p>
+        <div style="margin: 12px 0;">
+          <a href="#cotizacion" class="btn-ofertas">Solicitar ahora</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Beneficios (sin cambios) ===== -->
+    <h2>Beneficios</h2>
+    <ul class="beneficios">
+      <li>
+        <img src="imagenes/garantia-personal.png" width="60" height="60" alt="Técnico">
+        Garantía en reparaciones y productos.
+      </li><br>
+      <li>
+        <img src="imagenes/tinta.png" width="60" height="60" alt="Tinta">
+        Consumibles originales y de alta calidad.
+      </li><br>
+      <li>
+        <img src="imagenes/mecanico.png" width="60" height="60" alt="Mecánico">
+        Servicio técnico profesional y rápido.
+      </li><br>
+      <li>
+        <img src="imagenes/tecnico.png" width="60" height="60" alt="Soporte">
+        Entrega y soporte confiable.
+      </li>
+    </ul>
+
+    <!-- ===== Tabla de precios (sin cambios) ===== -->
+    <h2>Tabla de precios</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Servicio</th>
+          <th>Tiempo estimado</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Mantenimiento preventivo</td><td>2 días</td><td>$670 MXN</td></tr>
+        <tr><td>Reparación de impresora</td><td>3-5 días</td><td>$1,000 MXN</td></tr>
+        <tr><td>Instalación de Multifuncional</td><td>1 día</td><td>$500 MXN</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Preguntas frecuentes -->
+    <section>
+      <h2>Preguntas frecuentes</h2>
+      <ul class="faq">
+        <li><strong>¿Los precios incluyen IVA?</strong> Sí, los precios mostrados son finales a menos que se indique lo contrario en la cotización.</li>
+        <li><strong>¿Qué marcas atienden?</strong> HP, Canon, Epson, Brother, Samsung, Xerox, entre otras.</li>
+        <li><strong>¿Cuál es el tiempo de respuesta?</strong> Usualmente en menos de 24 horas hábiles a partir de tu solicitud.</li>
+        <li><strong>¿Ofrecen garantía?</strong> Sí, contamos con garantía en reparaciones y consumibles (ver términos en la cotización).</li>
+        <li><strong>¿Pueden acudir a mi oficina?</strong> Sí, contamos con servicio a domicilio en zona Celaya y alrededores.</li>
+      </ul>
+    </section>
+
+    <!-- Marcas atendidas (en texto para no agregar imágenes nuevas) -->
+    <section>
+      <h2>Marcas que atendemos</h2>
+      <p>HP · Canon · Epson · Brother · Samsung · Xerox · Ricoh · Kyocera</p>
+    </section>
+
+    <!-- ===== Solicita tu cotización (sin cambios) ===== -->
+    <!-- Ancla para el botón "Solicitar ahora" -->
+    <a id="cotizacion"></a>
+    <h2>Solicita tu cotización</h2>
+    <form>
+      <label>Nombre:<br><input type="text" name="nombre" required></label><br><br>
+      <label>Correo:<br><input type="email" name="correo" required></label><br><br>
+      <label>Teléfono:<br><input type="tel" name="telefono"></label><br><br>
+      <label>Tipo de equipo:<br>
+        <select name="equipo">
+          <option>Impresora láser</option>
+          <option>Impresora de inyección</option>
+          <option>Multifuncional</option>
+          <option>Copiadora</option>
+          <option>Otro</option>
+        </select>
+      </label><br><br>
+      <label>Descripción:<br><textarea name="mensaje"></textarea></label><br><br>
+      <button type="submit">Enviar solicitud</button>
+    </form>
+
+    <!-- CTA final -->
+    <div style="margin: 20px 0; text-align: center;">
+      <a href="#cotizacion" class="btn-ofertas">Solicitar cotización</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>
+      En Técnicos Celaya protegemos tus datos personales. La información que nos
+      proporciones será utilizada únicamente para responder a tus solicitudes de
+      servicio, cotización o compra de consumibles. No compartimos tus datos con
+      terceros sin tu consentimiento. Para más información, contáctanos en 
+      <a href="mailto:tecnicosCelaya@gmail.com">tecnicosCelaya@gmail.com</a>.
+    </p>
+    <p>© 2025 Técnicos Celaya</p>
+  </footer>
+
+  <!-- Estilo mínimo para el botón (puedes moverlo a estilo.css si lo prefieres) -->
+  <style>
+    .btn-ofertas {
+      display: inline-block;
+      background-color: cadetblue;
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: filter .2s ease;
+    }
+    .btn-ofertas:hover { filter: brightness(1.08); }
+    .promo {
+      background: #f5fbfb; 
+      border: 1px solid #d8e7e8; 
+      padding: 12px; 
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+    .faq { list-style: disc; padding-left: 20px; }
+  </style>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* Centrado bajo el header fijo */
+.login-page {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Caja principal */
+.login-box {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+}
+
+.login-box h1 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #0a4f51;
+}
+
+/* Inputs */
+.login-form input {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #cdd6d7;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #f9fbfb;
+  box-sizing: border-box;
+}
+
+.login-form input:focus {
+  outline: 2px solid cadetblue;
+  background: #fff;
+}
+
+/* Botón */
+.login-form button {
+  width: 100%;
+  padding: 12px 14px;
+  border: none;
+  border-radius: 12px;
+  background: cadetblue;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: filter .2s ease;
+}
+
+.login-form button:hover {
+  filter: brightness(1.05);
+}
+
+/* Texto de olvidaste */
+.forgot-text {
+  margin-top: 12px;
+}
+
+.forgot-text a {
+  font-size: 0.9rem;
+  color: #0e6f72;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.forgot-text a:hover {
+  text-decoration: underline;
+}
+
+/* Texto de registro */
+.signup-text {
+  margin-top: 18px;
+  font-size: 0.95rem;
+}
+
+.signup-text a {
+  color: cadetblue;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}

@@ -5,79 +5,52 @@
   <title>Soluciones completas para tus impresoras y copiadoras</title>
   <link rel="stylesheet" href="estilos/estilo.css">
   <link rel="stylesheet" href="estilos/menu.css">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+
+
 <body>
   <header>
     <img src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" class="logo">
     <nav id="menu">
-      <a href="landing page.html">Inicio</a>
+      <a href="landing page.html" aria-current="page">Inicio</a>
       <a href="registro.html">Registro</a>
       <a href="login.html">Login</a>
       <a href="ofertas.html">Ofertas</a>
       <a href="aboutus.html">Sobre nosotros</a>
     </nav>
   </header>
+  <script>
+(function() {
+  const header = document.querySelector("header");
+  let lastScrollY = window.scrollY;
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > lastScrollY && window.scrollY > 50) {
+      // Scrollea hacia abajo -> ocultar header
+      header.classList.add("hide-on-scroll");
+    } else {
+      // Scrollea hacia arriba -> mostrar header
+      header.classList.remove("hide-on-scroll");
+    }
+    lastScrollY = window.scrollY;
+  });
+})();
+</script>
 
   <h1>
-      Soluciones completas para tus impresoras y copiadoras
-    </h1>
-  <p id="sub">Reparación rápida, venta de consumibles y equipos confiables para mantener tu oficina siempre operativa.</p>
+    Soluciones completas para tus impresoras y copiadoras
+  </h1>
+  <p id="sub">
+    Reparación rápida, venta de consumibles y equipos confiables para mantener tu oficina siempre operativa.
+  </p>
   <img src="imagenes/copiadora.jpg" alt="copiadora en reparación" width="1500" height="1500"><br>
 
-  <h2>Beneficios</h2>
-  <ul class="beneficios">
-    <li>
-      <img src="imagenes/garantia-personal.png" width="60" height="60" alt="Técnico">
-      Garantía en reparaciones y productos.
-    </li><br>
-    <li>
-      <img src="imagenes/tinta.png" width="60" height="60" alt="Tinta">
-      Consumibles originales y de alta calidad.
-    </li><br>
-    <li>
-      <img src="imagenes/mecanico.png" width="60" height="60" alt="Mecánico">
-      Servicio técnico profesional y rápido.
-    </li><br>
-    <li>
-      <img src="imagenes/tecnico.png" width="60" height="60" alt="Soporte">
-      Entrega y soporte confiable.
-    </li>
-  </ul>
+  <!-- Botón CTA a ofertas -->
+  <div style="margin:20px 0; text-align:center;">
+    <a href="ofertas.html" class="btn-ofertas">Ver ofertas</a>
+  </div>
 
-  <h2>Tabla de precios</h2>
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Servicio</th>
-        <th>Tiempo estimado</th>
-        <th>Precio</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>Mantenimiento preventivo</td><td>2 días</td><td>$670 MXN</td></tr>
-      <tr><td>Reparación de impresora</td><td>3-5 días</td><td>$1,000 MXN</td></tr>
-      <tr><td>Instalación de Multifuncional</td><td>1 día</td><td>$500 MXN</td></tr>
-    </tbody>
-  </table>
-
-  <h2>Solicita tu cotización</h2>
-  <form>
-    <label>Nombre:<br><input type="text" name="nombre" required></label><br><br>
-    <label>Correo:<br><input type="email" name="correo" required></label><br><br>
-    <label>Teléfono:<br><input type="tel" name="telefono"></label><br><br>
-    <label>Tipo de equipo:<br>
-      <select name="equipo">
-        <option>Impresora láser</option>
-        <option>Impresora de inyección</option>
-        <option>Multifuncional</option>
-        <option>Copiadora</option>
-        <option>Otro</option>
-      </select>
-    </label><br><br>
-    <label>Descripción:<br><textarea name="mensaje"></textarea></label><br><br>
-    <button type="submit">Enviar solicitud</button>
-  </form>
+  <!-- (Se movieron Beneficios, Tabla de precios y Cotización a ofertas.html) -->
 
   <h2>Testimonios</h2>
   <blockquote>
@@ -121,5 +94,22 @@
     </p>
     <p>© 2025 Técnicos Celaya</p>
   </footer>
+
+  <!-- Estilos rápidos para el botón -->
+  <style>
+    .btn-ofertas {
+      display: inline-block;
+      background-color: cadetblue;
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: filter .2s ease;
+    }
+    .btn-ofertas:hover {
+      filter: brightness(1.1);
+    }
+  </style>
 </body>
 </html>

@@ -95,3 +95,28 @@ body{
     font-size: 30px;
     
 }
+
+/* Que el body siempre ocupe el 100% de la pantalla */
+html, body {
+    height: 100%;
+}
+
+/* El body en modo columna */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main o el contenedor de tu contenido se expande */
+main {
+    flex: 1;   /* ocupa todo el espacio disponible */
+}
+
+/* Footer queda siempre abajo */
+footer {
+    margin-top: auto;   /* se empuja hacia el final */
+    color: rgb(202, 211, 219);
+    background-color: cadetblue;
+    padding: 16px;      /* dale algo de aire para que no quede “aplastado” */
+    text-align: center;
+}
