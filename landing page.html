@@ -1,170 +1,170 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <title>Soluciones completas para tus impresoras y copiadoras</title>
+  <head>
+    <meta charset="utf-8" />
+    <title>Soluciones completas para tus impresoras y copiadoras</title>
 
-  <!-- CSS del proyecto -->
-  <link rel="stylesheet" href="estilos/estilo.css">
-  <link rel="stylesheet" href="estilos/menu.css">
+    <!-- CSS del proyecto -->
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="stylesheet" href="estilos/menu.css">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
-  <!-- Header / Menú (fijo) -->
-  <header>
-    <img src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" class="logo">
-    <nav id="menu" aria-label="Principal">
-      <a href="landing page.html" aria-current="page">Inicio</a>
-      <a href="registro.html">Registro</a>
-      <a href="login.html">Login</a>
-      <a href="ofertas.html">Ofertas</a>
-      <a href="aboutus.html">Sobre nosotros</a>
-    </nav>
-  </header>
-  <script>
-(function() {
-  const header = document.querySelector("header");
-  let lastScrollY = window.scrollY;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- Header / Menú (fijo) -->
+    <header>
+      <img src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" class="logo">
+      <nav id="menu" aria-label="Principal">
+        <a href="landing page.html" aria-current="page">Inicio</a>
+        <a href="registro.html">Registro</a>
+        <a href="login.html">Login</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="aboutus.html">Sobre nosotros</a>
+      </nav>
+    </header>
+    <script>
+      (function() {
+        const header = document.querySelector("header");
+        let lastScrollY = window.scrollY;
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > lastScrollY && window.scrollY > 50) {
-      // Scrollea hacia abajo -> ocultar header
-      header.classList.add("hide-on-scroll");
-    } else {
-      // Scrollea hacia arriba -> mostrar header
-      header.classList.remove("hide-on-scroll");
-    }
-    lastScrollY = window.scrollY;
-  });
-})();
-</script>
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > lastScrollY && window.scrollY > 50) {
+            // Scrollea hacia abajo -> ocultar header
+            header.classList.add("hide-on-scroll");
+          } else {
+            // Scrollea hacia arriba -> mostrar header
+            header.classList.remove("hide-on-scroll");
+          }
+          lastScrollY = window.scrollY;
+        });
+      })();
+  </script>
 
-  <!-- Contenido principal -->
-  <main>
-    <!-- HERO con imagen y CTA -->
-    <section class="hero">
-      <img src="imagenes/copiadora.jpg" alt="copiadora en reparación">
-      <div class="hero-text">
-        <h1>Soluciones completas para tus impresoras y copiadoras</h1>
-        <p>Reparación rápida, venta de consumibles y equipos confiables para mantener tu oficina siempre operativa.</p>
-        <a href="ofertas.html" class="btn-cta">Ver ofertas</a>
+    <!-- Contenido principal -->
+    <main>
+      <!-- HERO con imagen y CTA -->
+      <section class="hero">
+        <img src="imagenes/copiadora.jpg" alt="copiadora en reparación">
+        <div class="hero-text">
+          <h1>Soluciones completas para tus impresoras y copiadoras</h1>
+          <p>Reparación rápida, venta de consumibles y equipos confiables para mantener tu oficina siempre operativa.</p>
+          <a href="ofertas.html" class="btn-cta">Ver ofertas</a>
+        </div>
+      </section>
+
+      <!-- Testimonios -->
+      <h2>Testimonios</h2>
+      <blockquote>
+        <img src="imagenes/avatar.png" width="20" height="20" alt="Cliente"><br>
+        “Excelente servicio, repararon nuestra impresora en tiempo récord y los consumibles son de calidad.”<br>
+        — Grupo Herdez
+      </blockquote>
+
+      <blockquote>
+        <img src="imagenes/avatar.png" width="20" height="20" alt="Cliente"><br>
+        “Siempre compro mis cartuchos aquí, la atención es rápida y confiable.”<br>
+        — Leo Mendoza
+      </blockquote>
+
+      <blockquote>
+        <img src="imagenes/avatar.png" width="20" height="20" alt="Cliente"><br>
+        “Una vez le di un zurdazo por error a mi impresora y ellos la logaron arreglar, muy recomendado.”<br>
+        — El canelo
+      </blockquote>
+
+      <!-- Contacto -->
+      <h2>Contáctanos</h2>
+      <div>
+        <p>
+          <img src="imagenes/llamada-telefonica.png" width="20" height="20" alt="Teléfono">
+          Teléfono: <a href="tel:+527685345642">+52 768 534 5642</a>
+        </p>
+        <p>
+          <img src="imagenes/correo.png" width="20" height="20" alt="Correo">
+          Correo: <a href="mailto:tecnicosCelaya@gmail.com">tecnicosCelaya@gmail.com</a>
+        </p>
       </div>
-    </section>
 
-    <!-- Testimonios -->
-    <h2>Testimonios</h2>
-    <blockquote>
-      <img src="imagenes/avatar.png" width="20" height="20" alt="Cliente"><br>
-      “Excelente servicio, repararon nuestra impresora en tiempo récord y los consumibles son de calidad.”<br>
-      — Grupo Herdez
-    </blockquote>
+      <!-- Garantías -->
+      <h2>Garantías y distintivos</h2>
+      <ul>
+        <li>Garantía de 30 días en reparaciones.</li>
+        <li>Consumibles originales y certificados.</li>
+        <li>Técnicos capacitados y con experiencia.</li>
+      </ul>
+    </main>
 
-    <blockquote>
-      <img src="imagenes/avatar.png" width="20" height="20" alt="Cliente"><br>
-      “Siempre compro mis cartuchos aquí, la atención es rápida y confiable.”<br>
-      — Leo Mendoza
-    </blockquote>
-
-     <blockquote>
-      <img src="imagenes/avatar.png" width="20" height="20" alt="Cliente"><br>
-      “Una vez le di un zurdazo por error a mi impresora y ellos la logaron arreglar, muy recomendado.”<br>
-      — El canelo
-    </blockquote>
-
-    <!-- Contacto -->
-    <h2>Contáctanos</h2>
-    <div>
+    <!-- Footer / Disclaimer -->
+    <footer>
       <p>
-        <img src="imagenes/llamada-telefonica.png" width="20" height="20" alt="Teléfono">
-        Teléfono: <a href="tel:+527685345642">+52 768 534 5642</a>
+        En Técnicos Celaya protegemos tus datos personales. La información que nos
+        proporciones será utilizada únicamente para responder a tus solicitudes de
+        servicio, cotización o compra de consumibles. No compartimos tus datos con
+        terceros sin tu consentimiento. Para más información, contáctanos en 
+        <a href="mailto:tecnicosCelaya@gmail.com">tecnicosCelaya@gmail.com</a>.
       </p>
-      <p>
-        <img src="imagenes/correo.png" width="20" height="20" alt="Correo">
-        Correo: <a href="mailto:tecnicosCelaya@gmail.com">tecnicosCelaya@gmail.com</a>
-      </p>
-    </div>
+      <p>© 2025 Técnicos Celaya</p>
+    </footer>
 
-    <!-- Garantías -->
-    <h2>Garantías y distintivos</h2>
-    <ul>
-      <li>Garantía de 30 días en reparaciones.</li>
-      <li>Consumibles originales y certificados.</li>
-      <li>Técnicos capacitados y con experiencia.</li>
-    </ul>
-  </main>
+    <!-- Estilos mínimos específicos de esta página (puedes moverlos a estilos/estilo.css) -->
+    <style>
+      /* Estructura para que el footer quede al fondo si hay poco contenido */
+      html, body { height: 100%; }
+      body {
+        display: flex;
+        flex-direction: column;
+        margin: 0; /* por si no está en tu CSS */
+        background-color: #e0e7ee; /* respeta tu fondo actual */
+      }
+      main { flex: 1; }
 
-  <!-- Footer / Disclaimer -->
-  <footer>
-    <p>
-      En Técnicos Celaya protegemos tus datos personales. La información que nos
-      proporciones será utilizada únicamente para responder a tus solicitudes de
-      servicio, cotización o compra de consumibles. No compartimos tus datos con
-      terceros sin tu consentimiento. Para más información, contáctanos en 
-      <a href="mailto:tecnicosCelaya@gmail.com">tecnicosCelaya@gmail.com</a>.
-    </p>
-    <p>© 2025 Técnicos Celaya</p>
-  </footer>
+      /* HERO */
+      .hero {
+        position: relative;
+        width: 100%;
+        max-height: 500px;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+      .hero img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        display: block;
+        filter: brightness(0.65); /* mejora contraste del texto */
+      }
+      .hero-text {
+        position: absolute;
+        inset: 0; /* top/right/bottom/left:0 */
+        display: grid;
+        place-content: center;
+        text-align: center;
+        color: #fff;
+        padding: 0 20px;
+        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.568);
+      }
+      .hero-text h1 {
+        font-size: 2rem;
+        margin: 0 0 10px 0;
+      }
+      .hero-text p {
+        font-size: 1.1rem;
+        margin: 0 0 20px 0;
+      }
+      .btn-cta {
+        display: inline-block;
+        background-color: cadetblue;
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 10px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: filter 0.2s ease;
+      }
+      .btn-cta:hover { filter: brightness(1.1); }
 
-  <!-- Estilos mínimos específicos de esta página (puedes moverlos a estilos/estilo.css) -->
-  <style>
-    /* Estructura para que el footer quede al fondo si hay poco contenido */
-    html, body { height: 100%; }
-    body {
-      display: flex;
-      flex-direction: column;
-      margin: 0; /* por si no está en tu CSS */
-      background-color: #e0e7ee; /* respeta tu fondo actual */
-    }
-    main { flex: 1; }
-
-    /* HERO */
-    .hero {
-      position: relative;
-      width: 100%;
-      max-height: 500px;
-      overflow: hidden;
-      margin-bottom: 30px;
-    }
-    .hero img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      display: block;
-      filter: brightness(0.65); /* mejora contraste del texto */
-    }
-    .hero-text {
-      position: absolute;
-      inset: 0; /* top/right/bottom/left:0 */
-      display: grid;
-      place-content: center;
-      text-align: center;
-      color: #fff;
-      padding: 0 20px;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.568);
-    }
-    .hero-text h1 {
-      font-size: 2rem;
-      margin: 0 0 10px 0;
-    }
-    .hero-text p {
-      font-size: 1.1rem;
-      margin: 0 0 20px 0;
-    }
-    .btn-cta {
-      display: inline-block;
-      background-color: cadetblue;
-      color: #fff;
-      padding: 12px 24px;
-      border-radius: 10px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: filter 0.2s ease;
-    }
-    .btn-cta:hover { filter: brightness(1.1); }
-
-    /* Asegura que el footer tenga algo de relleno y se vea bien al fondo */
-    footer { padding: 16px; text-align: center; }
-  </style>
-</body>
+      /* Asegura que el footer tenga algo de relleno y se vea bien al fondo */
+      footer { padding: 16px; text-align: center; }
+    </style>
+  </body>
 </html>
