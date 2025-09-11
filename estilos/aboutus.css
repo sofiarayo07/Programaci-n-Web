@@ -1,0 +1,72 @@
+
+
+h1, h2, h3 {
+    color: #0e6f72;
+}
+#valores{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.quienes-somos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.quienes-somos .texto {
+    flex: 1;
+}
+
+.quienes-somos .imagen {
+    flex: 1;
+    text-align: right;
+}
+
+.quienes-somos img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    margin-left: 50px;
+}
+
+/* Sección inicial */
+.inicial {
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+/* Lista de valores */
+.lista {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;      
+    max-width: 400px;    
+    text-align: center;  
+}
+
+.lista li {
+    padding: 12px;
+    border: 1px solid #22b689;
+    background: linear-gradient(45deg, #b4b6b6, #88a7a7, #2e8f8f);
+    border-radius: 6px;
+    margin: 10px auto;   
+    width: 100%;
+}
