@@ -1,102 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <title>Soluciones completas para tus impresoras y copiadoras</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Técnicos Celaya</title>
 
-    <link rel="stylesheet" href="estilos/estilo.css">
-    <link rel="stylesheet" href="estilos/menu.css">
+  <!-- SEO básico -->
+  <meta name="description" content="Servicios técnicos de reparación y mantenimiento de impresoras y copiadoras en Celaya. Atención inmediata, refacciones originales y soporte especializado." />
+  <meta property="og:title" content="Técnicos Celaya" />
+  <meta property="og:description" content="Soluciones técnicas confiables y al alcance de todos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="./" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <header>
-      <img src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" class="logo">
-      <nav id="menu" aria-label="Principal">
-        <a href="index.html" aria-current="page">Inicio</a>
-        <a href="registro.html">Registro</a>
-        <a href="login.html">Login</a>
-        <a href="ofertas.html">Ofertas</a>
-        <a href="aboutus.html">Nosotros</a>
-      </nav>
-    </header>
-    <script>
-      (function() {
-        const header = document.querySelector("header");
-        let lastScrollY = window.scrollY;
+  <link rel="icon" href="favicon.ico" />
+  <link rel="stylesheet" href="estilos/landing.css" />
+</head>
+<body>
 
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > lastScrollY && window.scrollY > 50) {
-            // Scrollea hacia abajo -> ocultar header
-            header.classList.add("hide-on-scroll");
-          } else {
-            // Scrollea hacia arriba -> mostrar header
-            header.classList.remove("hide-on-scroll");
-          }
-          lastScrollY = window.scrollY;
-        });
-      })();
-  </script>
+  <!-- HERO -->
+  <header class="hero" role="banner" aria-label="Sección principal">
+    <div class="hero-inner">
+      <img class="logo-hero" src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" />
+      <h1>Soluciones técnicas confiables y al alcance de todos</h1>
+      <p class="tagline">Reparamos impresoras y copiadoras, vendemos consumibles y mantenemos tu oficina siempre operando.</p>
+      <a href="home.html" class="btn btn-primary" aria-label="Ir a la página con información completa">Conócenos</a>
+    </div>
+  </header>
 
-    <main>
-      <section class="hero">
-        <img src="imagenes/copiadora.jpg" alt="copiadora en reparación">
-        <div class="hero-text">
-          <h1>Soluciones completas para tus impresoras y copiadoras</h1>
-          <p>Reparación rápida, venta de consumibles y equipos confiables para mantener tu oficina siempre operativa.</p>
-          <a href="ofertas.html" class="btn-cta">Ver ofertas</a>
-        </div>
-      </section>
+  <!-- BENEFICIOS -->
+  <section class="beneficios" aria-label="Beneficios">
+    <h2>¿Por qué elegirnos?</h2>
+    <div class="cards">
+      <article class="card">
+        <img src="imagenes/rapidez.png" alt="Rapidez" />
+        <h3>Atención inmediata</h3>
+        <p>Solucionamos problemas en tiempos récord.</p>
+      </article>
+      <article class="card">
+        <img src="imagenes/refacciones.png" alt="Refacciones" />
+        <h3>Refacciones originales</h3>
+        <p>Garantía de calidad en cada servicio.</p>
+      </article>
+      <article class="card">
+        <img src="imagenes/soporte.png" alt="Soporte" />
+        <h3>Soporte especializado</h3>
+        <p>Un equipo de técnicos expertos.</p>
+      </article>
+    </div>
+  </section>
 
-      <h2>Testimonios</h2>
-      <blockquote>
-        <img src="imagenes/avatar.png" width="20" height="20" alt="Cliente"><br>
-        “Excelente servicio, repararon nuestra impresora en tiempo récord y los consumibles son de calidad.”<br>
-        — Grupo Herdez
-      </blockquote>
+  <!-- TESTIMONIOS + LOGOS -->
+  <section class="social-proof" aria-label="Opiniones y confianza">
+    <blockquote>
+      “Excelente servicio: repararon nuestra impresora en tiempo récord y los consumibles son de calidad.”
+      <br>— Grupo Herdez
+    </blockquote>
+    <div class="logos" aria-label="Marcas con las que trabajamos">
+      <img src="imagenes/hp.png" alt="HP" />
+      <img src="imagenes/canon.png" alt="Canon" />
+      <img src="imagenes/epson.png" alt="Epson" />
+      <img src="imagenes/brother.png" alt="Brother" />
+    </div>
+  </section>
 
-      <blockquote>
-        <img src="imagenes/avatar.png" width="20" height="20" alt="Cliente"><br>
-        “Siempre compro mis cartuchos aquí, la atención es rápida y confiable.”<br>
-        — Leo Mendoza
-      </blockquote>
+  <!-- CTA FINAL -->
+  <section class="cta-final" aria-label="Llamado a la acción">
+    <h3>¿Listo para optimizar tu equipo?</h3>
+    <p>Conoce nuestros servicios y agenda tu revisión técnica.</p>
+    <a href="home.html" class="btn btn-primary" aria-label="Ir a la página con información completa">Conócenos</a>
+  </section>
 
-      <blockquote>
-        <img src="imagenes/avatar.png" width="20" height="20" alt="Cliente"><br>
-        “Una vez le di un zurdazo por error a mi impresora y ellos la logaron arreglar, muy recomendado.”<br>
-        — El canelo
-      </blockquote>
+  <!-- WhatsApp flotante -->
+  <a class="wa" href="https://wa.me/5214611234567?text=Hola%20T%C3%A9cnicos%20Celaya,%20quiero%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener" aria-label="Contáctanos por WhatsApp">⌕</a>
 
-      <h2>Contáctanos</h2>
-      <div>
-        <p>
-          <img src="imagenes/llamada-telefonica.png" width="20" height="20" alt="Teléfono">
-          Teléfono: <a href="tel:+527685345642">+52 768 534 5642</a>
-        </p>
-        <p>
-          <img src="imagenes/correo.png" width="20" height="20" alt="Correo">
-          Correo: <a href="mailto:tecnicosCelaya@gmail.com">tecnicosCelaya@gmail.com</a>
-        </p>
-      </div>
-
-      <h2>Garantías y distintivos</h2>
-      <ul>
-        <li>Garantía de 30 días en reparaciones.</li>
-        <li>Consumibles originales y certificados.</li>
-        <li>Técnicos capacitados y con experiencia.</li>
-      </ul>
-    </main>
-
-    <!-- Footer / Disclaimer -->
-    <footer>
-      <p>
-        En Técnicos Celaya protegemos tus datos personales. La información que nos
-        proporciones será utilizada únicamente para responder a tus solicitudes de
-        servicio, cotización o compra de consumibles. No compartimos tus datos con
-        terceros sin tu consentimiento. Para más información, contáctanos en 
-        <a href="mailto:tecnicosCelaya@gmail.com">tecnicosCelaya@gmail.com</a>.
-      </p>
-      <p>© 2025 Técnicos Celaya</p>
-    </footer>
-  </body>
+  <footer>
+    © 2025 Técnicos Celaya — Todos los derechos reservados
+  </footer>
+</body>
 </html>
