@@ -1,70 +1,124 @@
 <!doctype html>
 <html lang="es">
   <head>
+    <meta charset="utf-8" />
+    <title>Registro | Técnicos Celaya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <meta charset="utf-8" />
-      <title>Soluciones completas para tus impresoras y copiadoras</title>
-      <link rel="stylesheet" href="estilos/estilo.css">
-      <link rel="stylesheet" href="estilos/menu.css">
-    </head>
-    
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <body>
+    <!-- Estilos del proyecto -->
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="stylesheet" href="estilos/menu.css">
+  </head>
 
-      <header>
+  <body>
 
-         <img src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" class="logo"
-           onclick="window.location.href='home.html'" style="cursor:pointer;">
+    <!-- NAVBAR BOOTSTRAP -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" width="40" height="40" class="me-2">
+          Técnicos Celaya
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <nav id="menu">
-          <a href="home.html">Inicio</a>
-          <a href="registro.html">Registro</a>
-          <a href="login.html">Login</a>
-          <a href="ofertas.html">Ofertas</a>
-          <a href="aboutus.html">Nosotros</a>
-        </nav>
-      </header>
-<script>
-(function() {
-  const header = document.querySelector("header");
-  let lastScrollY = window.scrollY;
-
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > lastScrollY && window.scrollY > 50) {
-      // Scrollea hacia abajo -> ocultar header
-      header.classList.add("hide-on-scroll");
-    } else {
-      // Scrollea hacia arriba -> mostrar header
-      header.classList.remove("hide-on-scroll");
-    }
-    lastScrollY = window.scrollY;
-  });
-})();
-</script>
-      <h2 id="titulo-re">Registra tus datos en los campos correspondidos</h2>
-      <div class="registro">
-
-        <form id="formulario-datos">
-        <label>Nombre:<br><input type="text" name="nombre" required></label><br><br>
-        <label>Apellido:<br><input type="text" name="Apellido" required></label><br><br>
-        <label>Correo:<br><input type="email" name="correo" required></label><br><br>
-        <label>Teléfono:<br><input type="tel" name="telefono"></label><br><br>
-        <label>Contraseña<br><input type="password"></label><br><br>
-        <button type="submit" id="cuenta-creada">Crear cuenta</button>
-      </form>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="home.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="registro.html">Registro</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html">Nosotros</a></li>
+          </ul>
+        </div>
       </div>
-      
-    
+    </nav>
 
-      <footer>
-        <p>
-          En Técnicos Celaya protegemos tus datos personales. La información que nos
-          proporciones será utilizada únicamente para responder a tus solicitudes de
-          servicio, cotización o compra de consumibles. No compartimos tus datos con
-          terceros sin tu consentimiento. Para más información, contáctanos en 
-          <a href="mailto:tecnicosCelaya@gmail.com">tecnicosCelaya@gmail.com</a>.
-        </p>
-        <p>© 2025 Técnicos Celaya</p>
-      </footer>
-    </body>
+    <!-- Ocultar/mostrar navbar al hacer scroll -->
+    <script>
+      (function() {
+        const navbar = document.querySelector(".navbar");
+        let lastScrollY = window.scrollY;
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > lastScrollY && window.scrollY > 50) {
+            navbar.classList.add("hide-on-scroll");   // abajo -> ocultar
+          } else {
+            navbar.classList.remove("hide-on-scroll"); // arriba -> mostrar
+          }
+          lastScrollY = window.scrollY;
+        });
+      })();
+    </script>
+
+    <h2 id="titulo-re">Registra tus datos en los campos correspondidos</h2>
+
+    <div class="registro">
+      <form id="formulario-datos" novalidate>
+        <label for="nombre">Nombre:
+          <input type="text" id="nombre" name="nombre" required>
+        </label>
+
+        <label for="apellido">Apellido:
+          <input type="text" id="apellido" name="apellido" required>
+        </label>
+
+        <label for="correo">Correo:
+          <input type="email" id="correo" name="correo" inputmode="email" autocomplete="email" required>
+        </label>
+
+        <label for="telefono">Teléfono:
+          <input type="tel" id="telefono" name="telefono" inputmode="numeric"
+                 pattern="[0-9]{10}" title="Debe contener 10 dígitos numéricos">
+        </label>
+
+        <label for="password">Contraseña:
+          <input type="password" id="password" name="password" minlength="6" required>
+        </label>
+
+        <button type="submit" id="cuenta-creada" class="btn btn-primary w-100">Crear cuenta</button>
+      </form>
+
+      <div id="msg" class="mt-3" role="status" aria-live="polite"></div>
+    </div>
+
+    <footer class="mt-4">
+      <p>
+        En Técnicos Celaya protegemos tus datos personales. La información que nos
+        proporciones será utilizada únicamente para responder a tus solicitudes de
+        servicio, cotización o compra de consumibles. No compartimos tus datos con
+        terceros sin tu consentimiento. Para más información, contáctanos en 
+        <a href="mailto:tecnicosCelaya@gmail.com">tecnicosCelaya@gmail.com</a>.
+      </p>
+      <p>© 2025 Técnicos Celaya</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Validación mínima en cliente -->
+    <script>
+      (function () {
+        const form = document.getElementById('formulario-datos');
+        const msg = document.getElementById('msg');
+
+        form.addEventListener('submit', function (e) {
+          // Usa validación nativa del navegador
+          if (!form.checkValidity()) {
+            e.preventDefault();
+            e.stopPropagation();
+            msg.textContent = 'Por favor, revisa los campos marcados. El teléfono debe tener 10 dígitos.';
+            msg.className = 'alert alert-warning';
+          } else {
+            e.preventDefault(); 
+            msg.textContent = '¡Cuenta creada! (demo)'; 
+            msg.className = 'alert alert-success';
+          }
+        }, false);
+      })();
+    </script>
+  </body>
 </html>

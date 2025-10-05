@@ -13,6 +13,7 @@ body{
   color: var(--text);
   background: var(--bg);
   line-height: 1.45;
+  padding-top: 70px;
 }
 
 /* HERO */
@@ -151,4 +152,9 @@ footer{
   padding: 18px;
   color: #4b6a74;
   font-size: .95rem;
+}
+
+.hide-on-scroll {
+  transform: translateY(-100%);
+  transition: transform 0.4s ease;
 }
