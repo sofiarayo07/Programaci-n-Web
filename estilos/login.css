@@ -90,3 +90,10 @@
 .signup-text a:hover {
   text-decoration: underline;
 }
+
+/* Estados de validación */
+.is-invalid { border-color: #dc3545 !important; }
+.is-valid   { border-color: #198754 !important; }
+
+/* Ajuste del help del correo cuando hay error */
+#emailHelp.text-danger { display: block; }
