@@ -31,6 +31,16 @@ table th {
     background-color: cadetblue;
     color: white;
 }
+/* espacio reservado para el error, evita reflow */
+.fv-slot{
+  display:block;
+  height: 20px;          /* altura fija en vez de min-height */
+  font-size:.875rem;
+  margin-top:.25rem;
+  line-height: 20px;     /* alinea verticalmente */
+  overflow: hidden;      /* por si se desborda 1px */
+}
+
 
 /* ===== FOOTER ===== */
 footer {
