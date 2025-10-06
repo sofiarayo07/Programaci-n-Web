@@ -3,99 +3,113 @@
   <head>
     <meta charset="utf-8" />
     <title>Registro | Técnicos Celaya</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Estilos del proyecto -->
-    <link rel="stylesheet" href="estilos/estilo.css">
     <link rel="stylesheet" href="estilos/menu.css">
+    <link rel="stylesheet" href="estilos/estilo.css">  bbbe 
   </head>
 
   <body>
-
-    <!-- NAVBAR BOOTSTRAP -->
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-celaya">
-  <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center" href="home.html" aria-label="Ir a inicio">
-      <img src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" class="me-2">
-      Técnicos Celaya
-    </a>
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="home.html" aria-label="Ir a inicio">
+          <img src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" class="me-2" style="width:40px;height:40px;">
+          Técnicos Celaya
+        </a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
-            aria-expanded="false" aria-label="Abrir menú de navegación">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
+                aria-expanded="false" aria-label="Abrir menú de navegación">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Inicio</a></li>
-        <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
-        <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-        <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
-        <li class="nav-item"><a class="nav-link" href="aboutus.html">Nosotros</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
+        <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="home.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="registro.html">Registro</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html">Nosotros</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <!-- Ocultar/mostrar navbar al hacer scroll -->
     <script>
-      (function() {
+      (function () {
         const navbar = document.querySelector(".navbar");
-        let lastScrollY = window.scrollY;
+        let last = window.scrollY;
         window.addEventListener("scroll", () => {
-          if (window.scrollY > lastScrollY && window.scrollY > 50) {
-            navbar.classList.add("hide-on-scroll");   // abajo -> ocultar
-          } else {
-            navbar.classList.remove("hide-on-scroll"); // arriba -> mostrar
-          }
-          lastScrollY = window.scrollY;
+          const y = window.scrollY;
+          if (y > last && y > 50) navbar.classList.add("hide-on-scroll");
+          else navbar.classList.remove("hide-on-scroll");
+          last = y;
         });
       })();
     </script>
 
-    <h2 id="titulo-re">Registra tus datos en los campos correspondidos</h2>
+    <!-- Título -->
+    <h2 id="titulo-re">Registra tus datos en los campos correspondientes</h2>
 
-    <div class="registro">
-      <form id="formulario-datos" novalidate>
-        <label for="nombre">Nombre:
-          <input type="text" id="nombre" name="nombre" required>
-        </label>
+    <!-- Layout responsivo (no apachurrado) -->
+    <div class="container py-4">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
 
-        <label for="apellido">Apellido:
-          <input type="text" id="apellido" name="apellido" required>
-        </label>
+          <!-- Mensaje de estado -->
+          <div id="msg" class="d-none" role="status" aria-live="polite"></div>
 
-        <label for="correo">Correo:
-          <input type="email" id="correo" name="correo" inputmode="email" autocomplete="email" required>
-        </label>
+          <!-- Panel con tu diseño original (degradado) -->
+          <div class="registro">
+            <form id="formulario-datos" novalidate>
+              <div class="mb-2">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" name="nombre" class="form-control" required>
+              </div>
 
-        <label for="telefono">Teléfono:
-          <input type="tel" id="telefono" name="telefono" inputmode="numeric"
-                 pattern="[0-9]{10}" title="Debe contener 10 dígitos numéricos">
-        </label>
+              <div class="mb-2">
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" id="apellido" name="apellido" class="form-control" required>
+              </div>
 
-        <label for="password">Contraseña:
-          <input type="password" id="password" name="password" minlength="6" required>
-        </label>
+              <div class="mb-2">
+                <label for="correo" class="form-label">Correo</label>
+                <input type="email" id="correo" name="correo" class="form-control" inputmode="email" autocomplete="email" required>
+                <div class="form-text">Ejemplo: usuario@dominio.com</div>
+              </div>
 
-        <button type="submit" id="cuenta-creada" class="btn btn-primary w-100">Crear cuenta</button>
-      </form>
+              <div class="mb-2">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" class="form-control" inputmode="numeric" aria-describedby="telHelp">
+                <div id="telHelp" class="form-text">Ingresa 10 dígitos, solo números.</div>
+              </div>
 
-      <div id="msg" class="mt-3" role="status" aria-live="polite"></div>
+              <div class="mb-2">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" id="password" name="password" class="form-control" minlength="6" required>
+              </div>
+
+              <button type="submit" id="cuenta-creada" class="btn btn-primary">Crear cuenta</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
     </div>
 
-    <footer class="mt-4">
+    <footer>
       <p>
         En Técnicos Celaya protegemos tus datos personales. La información que nos
         proporciones será utilizada únicamente para responder a tus solicitudes de
         servicio, cotización o compra de consumibles. No compartimos tus datos con
         terceros sin tu consentimiento. Para más información, contáctanos en 
-        <a href="mailto:tecnicosCelaya@gmail.com">tecnicosCelaya@gmail.com</a>.
+        <a href="mailto:tecnicosCelaya@gmail.com" style="color:#fff;text-decoration:underline;">tecnicosCelaya@gmail.com</a>.
       </p>
       <p>© 2025 Técnicos Celaya</p>
     </footer>
@@ -103,26 +117,63 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Validación mínima en cliente -->
-    <script>
-      (function () {
-        const form = document.getElementById('formulario-datos');
-        const msg = document.getElementById('msg');
+    <!-- jQuery + jQuery Validation -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/localization/messages_es.min.js"></script>
 
-        form.addEventListener('submit', function (e) {
-          // Usa validación nativa del navegador
-          if (!form.checkValidity()) {
-            e.preventDefault();
-            e.stopPropagation();
-            msg.textContent = 'Por favor, revisa los campos marcados. El teléfono debe tener 10 dígitos.';
-            msg.className = 'alert alert-warning';
-          } else {
-            e.preventDefault(); 
-            msg.textContent = '¡Cuenta creada! (demo)'; 
-            msg.className = 'alert alert-success';
+    <!-- Validación -->
+    <script>
+      $(function () {
+        const $form = $("#formulario-datos");
+        const $msg  = $("#msg");
+
+        $form.validate({
+          errorElement: "div",
+          errorClass: "invalid-feedback",
+          validClass: "is-valid",
+          rules: {
+            nombre:   { required: true, minlength: 2 },
+            apellido: { required: true, minlength: 2 },
+            correo:   { required: true, email: true },
+            telefono: { required: true, digits: true, minlength: 10, maxlength: 10 },
+            password: { required: true, minlength: 6 }
+          },
+          messages: {
+            nombre:   { required: "Ingresa tu nombre.", minlength: "Mínimo 2 caracteres." },
+            apellido: { required: "Ingresa tu apellido.", minlength: "Mínimo 2 caracteres." },
+            correo:   { required: "Ingresa tu correo.", email: "Formato de correo no válido." },
+            telefono: {
+              required: "Ingresa tu teléfono.",
+              digits:   "Solo números.",
+              minlength:"Debe tener exactamente 10 dígitos.",
+              maxlength:"Debe tener exactamente 10 dígitos."
+            },
+            password: { required: "Crea una contraseña.", minlength: "Mínimo 6 caracteres." }
+          },
+          errorPlacement: function (error, element) {
+            if (element.parent(".input-group").length) {
+              error.insertAfter(element.parent());
+            } else {
+              error.addClass("d-block");
+              error.insertAfter(element);
+            }
+          },
+          highlight: function (el) { $(el).addClass("is-invalid").removeClass("is-valid"); },
+          unhighlight: function (el) { $(el).removeClass("is-invalid").addClass("is-valid"); },
+          submitHandler: function () {
+            $msg.removeClass().addClass("alert alert-success").removeClass("d-none")
+                .text("¡Cuenta creada!");
+            // $.ajax({...}) aquí si deseas enviar al servidor
+            return false;
+          },
+          invalidHandler: function () {
+            $msg.removeClass().addClass("alert alert-warning").removeClass("d-none")
+                .text("Por favor, revisa los campos marcados. El teléfono debe tener 10 dígitos.");
           }
-        }, false);
-      })();
+        });
+      });
     </script>
   </body>
 </html>
+
