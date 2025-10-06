@@ -9,16 +9,18 @@ header {
     align-items: center;
     padding: 8px 20px;
     box-sizing: border-box;
-    z-index: 1000;          
+    z-index: 1000;   
+    
+    
 }
 
 
 body {
-    margin-top: 80px;  
+    margin-top: 60px;  
 }
 
 .logo {
-    height: 60px;
+    height: 70px;
     width: auto;
     margin-right: 20px;
 }
@@ -58,4 +60,92 @@ header {
 .navbar-brand img { 
     width: 40px; height: 40px; 
 }
+
+/* ===== Navbar Celaya (color footer + links centrados) ===== */
+.navbar-celaya { 
+  background-color: cadetblue !important; 
+}
+
+.navbar-celaya .navbar-brand,
+.navbar-celaya .nav-link,
+.navbar-celaya .navbar-toggler {
+  color: #fff !important;
+}
+
+.navbar-celaya .nav-link:hover,
+.navbar-celaya .nav-link:focus {
+  color: #eaf6f8 !important;
+}
+
+/* sin línea/sombra que deje franja */
+.navbar { 
+  margin: 0 !important; 
+  border: none !important; 
+  box-shadow: none !important; 
+}
+
+/* estética de los botones del menú */
+.navbar-nav.mx-auto .nav-link {
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+}
+
+/* Navbar de la landing (index) con color cadetblue */
+.navbar-celaya {
+  background-color: cadetblue !important;
+}
+
+.navbar-celaya .navbar-brand,
+.navbar-celaya .nav-link,
+.navbar-celaya .navbar-toggler {
+  color: #fff !important;            /* texto/iconos blancos */
+}
+
+.navbar-celaya .nav-link:hover,
+.navbar-celaya .nav-link:focus {
+  color: #eaf6f8 !important;          /* hover más claro */
+}
+
+/* Sin línea/sombra que a veces deja “franja” */
+.navbar {
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* === Utilidad de color para la navbar de la landing === */
+.bg-cadetblue {
+  --bs-bg-opacity: 1;
+  background-color: cadetblue !important;
+}
+
+/* Contraste correcto con navbar oscura */
+.bg-cadetblue .navbar-brand,
+.bg-cadetblue .nav-link,
+.bg-cadetblue .navbar-toggler {
+  color: #fff !important;
+}
+
+.bg-cadetblue .nav-link:hover,
+.bg-cadetblue .nav-link:focus {
+  color: #eaf6f8 !important;
+}
+
+/* Evita líneas/sombras que parecen “franja” */
+.navbar {
+  margin: 0 !important;
+  border: none !important;
+  box-shadow: none !important;}
+
+.navbar-celaya { background-color: cadetblue !important; }
+.navbar-celaya .navbar-brand,
+.navbar-celaya .nav-link,
+.navbar-celaya .navbar-toggler { color: #fff !important; }
+.navbar-celaya .nav-link:hover,
+.navbar-celaya .nav-link:focus { color: #eaf6f8 !important; }
+
+/* sin líneas/sombras que parezcan franja */
+.navbar { margin:0 !important; border:none !important; box-shadow:none !important; }
+
+
 
