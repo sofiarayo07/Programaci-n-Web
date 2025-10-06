@@ -13,7 +13,7 @@ body{
   color: var(--text);
   background: var(--bg);
   line-height: 1.45;
-  padding-top: 70px;
+  /*padding-top: 70px;*/
 }
 
 /* HERO */
