@@ -10,18 +10,18 @@
 
     <!-- Estilos del proyecto -->
     <link rel="stylesheet" href="estilos/menu.css">
-    <link rel="stylesheet" href="estilos/estilo.css">  bbbe 
+    <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="stylesheet" href="estilos/registro.css"> <!-- Estilos específicos de esta página -->
   </head>
 
   <body>
-    <!-- NAVBAR -->
+    <!-- NAVBAR unificada -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-celaya">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="home.html" aria-label="Ir a inicio">
           <img src="imagenes/fotocopia.png" alt="Logo Técnicos Celaya" class="me-2" style="width:40px;height:40px;">
           Técnicos Celaya
         </a>
-
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#menuPrincipal" aria-controls="menuPrincipal"
                 aria-expanded="false" aria-label="Abrir menú de navegación">
@@ -30,79 +30,102 @@
 
         <div class="collapse navbar-collapse justify-content-center" id="menuPrincipal">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="home.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="registro.html">Registro</a></li>
-            <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
-            <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
-            <li class="nav-item"><a class="nav-link" href="aboutus.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="home.html" data-path="home.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="registro.html" data-path="registro.html">Registro</a></li>
+            <li class="nav-item"><a class="nav-link" href="login.html" data-path="login.html">Login</a></li>
+            <li class="nav-item"><a class="nav-link" href="ofertas.html" data-path="ofertas.html">Ofertas</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html" data-path="aboutus.html">Nosotros</a></li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Ocultar/mostrar navbar al hacer scroll -->
-    <script>
-      (function () {
-        const navbar = document.querySelector(".navbar");
-        let last = window.scrollY;
-        window.addEventListener("scroll", () => {
-          const y = window.scrollY;
-          if (y > last && y > 50) navbar.classList.add("hide-on-scroll");
-          else navbar.classList.remove("hide-on-scroll");
-          last = y;
-        });
-      })();
-    </script>
-
-    <!-- Título -->
-    <h2 id="titulo-re">Registra tus datos en los campos correspondientes</h2>
-
-    <!-- Layout responsivo (no apachurrado) -->
-    <div class="container py-4">
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container py-4 py-lg-5">
       <div class="row justify-content-center">
-        <div class="col-12 col-sm-10 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
+        <div class="col-12 col-lg-8">
+          <div class="card shadow-sm border-0 form-card">
+            <div class="card-body p-4 p-lg-5">
+              <h1 class="h3 mb-4 text-center">Registrate gratis</h1>
 
-          <!-- Mensaje de estado -->
-          <div id="msg" class="d-none" role="status" aria-live="polite"></div>
+              <form id="formRegistro" novalidate>
+                <div class="row g-3">
+                  <!-- Nombre -->
+                  <div class="col-12 col-md-6">
+                    <label for="nombre" class="form-label">Nombre(s)</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre"
+                           placeholder="Ej. Alejandro" autocomplete="given-name" required>
+                  </div>
 
-          <!-- Panel con tu diseño original (degradado) -->
-          <div class="registro">
-            <form id="formulario-datos" novalidate>
-              <div class="mb-2">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" id="nombre" name="nombre" class="form-control" required>
-              </div>
+                  <!-- Apellidos -->
+                  <div class="col-12 col-md-6">
+                    <label for="apellidos" class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" id="apellidos" name="apellidos"
+                           placeholder="Ej. Pérez García" autocomplete="family-name" required>
+                  </div>
 
-              <div class="mb-2">
-                <label for="apellido" class="form-label">Apellido</label>
-                <input type="text" id="apellido" name="apellido" class="form-control" required>
-              </div>
+                  <!-- Correo -->
+                  <div class="col-12 col-md-6">
+                    <label for="correo" class="form-label">Correo electrónico</label>
+                    <input type="email" class="form-control" id="correo" name="correo"
+                           placeholder="tucorreo@dominio.com" inputmode="email" autocomplete="email" required>
+                  </div>
 
-              <div class="mb-2">
-                <label for="correo" class="form-label">Correo</label>
-                <input type="email" id="correo" name="correo" class="form-control" inputmode="email" autocomplete="email" required>
-                <div class="form-text">Ejemplo: usuario@dominio.com</div>
-              </div>
+                  <!-- Teléfono -->
+                  <div class="col-12 col-md-6">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <input type="tel" class="form-control" id="telefono" name="telefono"
+                           placeholder="10 dígitos" inputmode="numeric" autocomplete="tel"
+                           minlength="10" maxlength="10" required>
+                  </div>
 
-              <div class="mb-2">
-                <label for="telefono" class="form-label">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" class="form-control" inputmode="numeric" aria-describedby="telHelp">
-                <div id="telHelp" class="form-text">Ingresa 10 dígitos, solo números.</div>
-              </div>
+                  <!-- Dirección -->
+                  <div class="col-12">
+                    <label for="direccion" class="form-label">Dirección</label>
+                    <input type="text" class="form-control" id="direccion" name="direccion"
+                           placeholder="Calle, número, colonia, ciudad" autocomplete="street-address">
+                  </div>
 
-              <div class="mb-2">
-                <label for="password" class="form-label">Contraseña</label>
-                <input type="password" id="password" name="password" class="form-control" minlength="6" required>
-              </div>
+                  <!-- Contraseña -->
+                  <div class="col-12 col-md-6">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password"
+                           placeholder="Mínimo 8 caracteres" autocomplete="new-password" required>
+                    <div class="form-text">Usa al menos 8 caracteres.</div>
+                  </div>
 
-              <button type="submit" id="cuenta-creada" class="btn btn-primary">Crear cuenta</button>
-            </form>
+                  <!-- Confirmar contraseña -->
+                  <div class="col-12 col-md-6">
+                    <label for="confirmPassword" class="form-label">Confirmar contraseña</label>
+                    <input type="password" class="form-control" id="confirmPassword" name="confirmPassword"
+                           placeholder="Repite tu contraseña" autocomplete="new-password" required>
+                  </div>
+
+                  <!-- Aceptar Términos -->
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="1" id="acepto" name="acepto" required>
+                      <label class="form-check-label" for="acepto">
+                        Acepto los <a href="terminos.html" class="link-primary">Términos y Condiciones</a>.
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Botón -->
+                  <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100">
+                      Crear cuenta
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+            </div>
           </div>
-
         </div>
       </div>
-    </div>
-
+      
+    </main>
     <footer>
       <p>
         En Técnicos Celaya protegemos tus datos personales. La información que nos
@@ -114,66 +137,93 @@
       <p>© 2025 Técnicos Celaya</p>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- jQuery + jQuery Validation -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- jQuery Validate + mensajes en español -->
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/localization/messages_es.min.js"></script>
+    <!-- Bootstrap bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Validación -->
+    <!-- Activar item de navbar automáticamente -->
+    <script>
+      (function () {
+        const path = location.pathname.split('/').pop() || 'home.html';
+        document.querySelectorAll('.navbar .nav-link').forEach(a => {
+          if (a.dataset.path === path) a.classList.add('active');
+          else a.classList.remove('active');
+        });
+      })();
+    </script>
+
+    <!-- Validación de formulario (Bootstrap + jQuery Validate) -->
     <script>
       $(function () {
-        const $form = $("#formulario-datos");
-        const $msg  = $("#msg");
-
-        $form.validate({
+        $("#formRegistro").validate({
+          ignore: [], // valida todo
           errorElement: "div",
           errorClass: "invalid-feedback",
-          validClass: "is-valid",
-          rules: {
-            nombre:   { required: true, minlength: 2 },
-            apellido: { required: true, minlength: 2 },
-            correo:   { required: true, email: true },
-            telefono: { required: true, digits: true, minlength: 10, maxlength: 10 },
-            password: { required: true, minlength: 6 }
+          highlight: function (el) {
+            $(el).addClass("is-invalid").removeClass("is-valid");
           },
-          messages: {
-            nombre:   { required: "Ingresa tu nombre.", minlength: "Mínimo 2 caracteres." },
-            apellido: { required: "Ingresa tu apellido.", minlength: "Mínimo 2 caracteres." },
-            correo:   { required: "Ingresa tu correo.", email: "Formato de correo no válido." },
-            telefono: {
-              required: "Ingresa tu teléfono.",
-              digits:   "Solo números.",
-              minlength:"Debe tener exactamente 10 dígitos.",
-              maxlength:"Debe tener exactamente 10 dígitos."
-            },
-            password: { required: "Crea una contraseña.", minlength: "Mínimo 6 caracteres." }
+          unhighlight: function (el) {
+            $(el).removeClass("is-invalid").addClass("is-valid");
           },
           errorPlacement: function (error, element) {
-            if (element.parent(".input-group").length) {
-              error.insertAfter(element.parent());
+            if (element.hasClass("form-check-input")) {
+              // checkboxes/radios
+              error.appendTo(element.closest(".form-check"));
             } else {
-              error.addClass("d-block");
               error.insertAfter(element);
             }
           },
-          highlight: function (el) { $(el).addClass("is-invalid").removeClass("is-valid"); },
-          unhighlight: function (el) { $(el).removeClass("is-invalid").addClass("is-valid"); },
-          submitHandler: function () {
-            $msg.removeClass().addClass("alert alert-success").removeClass("d-none")
-                .text("¡Cuenta creada!");
-            // $.ajax({...}) aquí si deseas enviar al servidor
-            return false;
+          rules: {
+            nombre: { required: true, minlength: 2 },
+            apellidos: { required: true, minlength: 2 },
+            correo: { required: true, email: true },
+            telefono: { required: true, digits: true, minlength: 10, maxlength: 10 },
+            password: { required: true, minlength: 8 },
+            confirmPassword: {
+              required: true,
+              equalTo: "#password"
+            },
+            acepto: { required: true }
           },
-          invalidHandler: function () {
-            $msg.removeClass().addClass("alert alert-warning").removeClass("d-none")
-                .text("Por favor, revisa los campos marcados. El teléfono debe tener 10 dígitos.");
+          messages: {
+            telefono: {
+              digits: "Sólo números",
+              minlength: "Debe tener 10 dígitos",
+              maxlength: "Debe tener 10 dígitos"
+            },
+            confirmPassword: {
+              equalTo: "Las contraseñas no coinciden"
+            },
+            acepto: {
+              required: "Debes aceptar los términos"
+            }
+          },
+          submitHandler: function (form, e) {
+            e.preventDefault();
+            // Aquí puedes integrar tu flujo real (AJAX o redirección)
+            alert("¡Registro enviado correctamente!");
           }
         });
       });
     </script>
+
+    <script>
+      (function () {
+        const navbar = document.querySelector(".navbar");
+        let last = window.scrollY;
+        window.addEventListener("scroll", () => {
+          const y = window.scrollY;
+          const goingDown = y > last;
+          navbar.style.transform = goingDown ? "translateY(-100%)" : "translateY(0)";
+          navbar.style.transition = "transform .25s ease";
+          last = y;
+        }, { passive: true });
+      })();
+    </script>
+ 
   </body>
 </html>
-

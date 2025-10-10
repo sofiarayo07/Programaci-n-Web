@@ -1,0 +1,65 @@
+
+
+/* Separación del navbar */
+body {
+  padding-top: 72px;
+}
+
+/* Estilo general del card de registro */
+.form-card {
+  border-radius: 1rem;
+  background-color: #ffffff;
+}
+
+.form-card .card-body {
+  background-color: #f8f9fa;
+}
+
+/* Etiquetas y campos */
+.form-label {
+  font-weight: 600;
+  color: #151515;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+  min-height: 45px;
+}
+
+/* Espaciado del botón */
+button[type="submit"] {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Feedback visual al validar */
+.is-invalid {
+  border-color: #dc3545 !important;
+}
+
+.is-valid {
+  border-color: #198754 !important;
+}
+
+/* Feedback textual */
+.invalid-feedback {
+  font-size: 0.875rem;
+}
+
+/* Mejor distribución vertical en pantallas grandes */
+@media (min-width: 992px) {
+  .form-card .card-body {
+    padding: 3rem 4rem;
+  }
+}
+
+/* Botones hover */
+.btn-primary:hover {
+  background-color: #117a8b;
+}
+
+/* Pequeño sombreado */
+.form-card {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
