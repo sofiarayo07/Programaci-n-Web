@@ -1,6 +1,5 @@
 <?php
-// admin.php
-// (En el futuro aquí podrías validar la sesión del usuario)
+
 ?>
 <!doctype html>
 <html lang="es">
@@ -74,7 +73,7 @@
       </div>
     </footer>
 
-    <!-- Scripts -->
+   
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
