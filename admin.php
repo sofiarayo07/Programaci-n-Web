@@ -8,16 +8,13 @@
     <title>Panel Administrador | Técnicos Celaya</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Estilos del proyecto -->
     <link rel="stylesheet" href="estilos/menu.css">
     <link rel="stylesheet" href="estilos/estilo.css">
   </head>
 
   <body>
-    <!-- NAVBAR unificada -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-celaya">
       <div class="container-fluid">
         <a class="navbar-brand d-flex align-items-center" href="home.html" aria-label="Ir a inicio">
@@ -42,7 +39,6 @@
       </div>
     </nav>
 
-    <!-- CONTENIDO -->
     <main class="container py-4 py-lg-5">
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6">
@@ -60,7 +56,6 @@
       </div>
     </main>
 
-    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="container">
         <p class="mb-2">
@@ -77,7 +72,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Activar navbar actual -->
     <script>
       (function () {
         const path = location.pathname.split('/').pop() || 'home.html';

@@ -120,7 +120,6 @@ blockquote{
 @media (max-width: 720px){ .logos{ grid-template-columns: repeat(2, 1fr); } }
 .logos img{ width: 120px; height: auto; opacity: .85; filter: grayscale(100%); }
 
-/* CTA FINAL */
 .cta-final{
   padding: 44px 16px 64px;
   text-align: center;
@@ -129,7 +128,6 @@ blockquote{
 .cta-final h3{ font-size: clamp(1.4rem, 3vw, 1.9rem); margin: 0 0 12px; }
 .cta-final p{ margin: 0 0 18px; color: #40606b; }
 
-/* BOTÓN WHATSAPP FLOTANTE */
 .wa{
   position: fixed;
   right: 16px;

@@ -158,7 +158,7 @@
     <script>
       $(function () {
         $("#formRegistro").validate({
-          ignore: [], // valida todo
+          ignore: [], 
           errorElement: "div",
           errorClass: "invalid-feedback",
           highlight: function (el) {
@@ -169,7 +169,6 @@
           },
           errorPlacement: function (error, element) {
             if (element.hasClass("form-check-input")) {
-              // checkboxes/radios
               error.appendTo(element.closest(".form-check"));
             } else {
               error.insertAfter(element);

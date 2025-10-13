@@ -41,7 +41,6 @@
     </div>
   </nav>
 
-  <!-- Ocultar/mostrar navbar al hacer scroll (si lo quieres conservar) -->
   <script>
     (function() {
       const navbar = document.querySelector(".navbar");
@@ -57,7 +56,6 @@
     })();
   </script>
 
-  <!-- Contenido principal -->
   <main class="login-page container" style="padding-top: 96px;">
     <section class="login-box mx-auto" style="max-width: 420px;">
       <h1 class="text-center mb-3">Inicia sesión</h1>
@@ -123,15 +121,12 @@
   </footer>
 
 
-  <!-- jQuery + jQuery Validate + Bootstrap JS (ORDEN CORRECTO) -->
   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/localization/messages_es.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Validación: jQuery Validate con clases de Bootstrap -->
   <script>
-    // (Opcional) Método personalizado que muestra/oculta el help del email
     function caracteresCorreoValido(emailSelector, helpSelector){
       var emailValue = $(emailSelector).val();
       var caract = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+\.)([a-zA-Z0-9]{2,})+$/;
@@ -144,7 +139,6 @@
       }
     }
 
-    // Si quieres usar el método personalizado en vez del "email: true" nativo:
     $.validator.addMethod("correoValido", function (value, element) {
       return this.optional(element) || caracteresCorreoValido("#email", "#emailHelp");
     }, "Por favor, ingresa un correo válido.");
@@ -154,7 +148,6 @@
       var $alert = $("#form-alert");
 
       $form.validate({
-        // Estilo Bootstrap: is-invalid + invalid-feedback
         errorElement: "div",
         errorClass: "invalid-feedback",
         highlight: function (el) {
@@ -171,12 +164,10 @@
           }
         },
 
-        // Reglas: elige UNA de las dos para email (A = nativa, B = personalizada)
         rules: {
           email: {
             required: true,
-            email: true       // Opción A (nativa)
-            // correoValido: true // Opción B (usa tu método personalizado)
+            email: true       
           },
           password: {
             required: true,
@@ -187,7 +178,6 @@
           password: { minlength: "Debe tener al menos {0} caracteres." }
         },
 
-        // Mensaje de resumen arriba del formulario
         invalidHandler: function (_event, validator) {
           var errores = validator.numberOfInvalids();
           if (errores) {
@@ -202,7 +192,6 @@
           }
         },
 
-        // Si todo es válido, enviamos a admin.php
         submitHandler: function (form) {
           form.submit();
         }
